@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <title>Praktikum</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container-xxl">
+            <h1 class="text-center p-3 bg-light bg-gradient" style="margin: 0px; letter-spacing: 3px;">~ TUGAS PRAKTIKUM JAVASCRIPT ~</h1>
+            <div class="row text-white">
+                <!-- Praktikum Nomor 1 -->
+                <div class="col-lg-4 col-12 bg-primary" style="height: 88vh; padding: 0px !important;">
+                    <div class="card shadow text-center rouned-4 mx-3 mt-5">
+                        <div class="card-header bg-dark">
+                            <h5 class="text-center" style="letter-spacing: 3px;">Hasil Penjumlahan</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Bilangan 1</span>
+                                    <input type="text" class="form-control" name="bil1" id="bil1">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text" id="inputGroup-sizing-default">Bilangan 2</span>
+                                    <input type="text" class="form-control" name="bil2" id="bil2">
+                                </div>
+                                <div class="row mx-3">
+                                    <button class="col-12 btn btn-primary" type="button" onclick="sumMethod()">Hitung</button>
+                                    <button class="mt-3 col-12 btn btn-outline-primary fw-bolder text-black" disabled type="button">
+                                        Hasil Akhir = <span id="hasilJumlah">0</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Praktikum Nomor 2 -->
+                <div class="col-lg-4 col-12 bg-dark" style="height: 88vh; padding: 0px !important;">
+                    <div class="card shadow text-center rouned-4 mx-3 mt-5">
+                        <div class="card-header bg-dark">
+                            <h5 class="text-center" style="letter-spacing: 3px;">Menentukan Bentuk Zat</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control" name="suhu" id="suhu" placeholder="Masukkan suhu benda yang akan dicek!">
+                                </div>
+                                <div class="row mx-3">
+                                    <button class="col-12 btn btn-primary" type="button" onclick="suhuMethod()">Periksa</button>
+                                    <button class="mt-3 col-12 btn btn-outline-primary fw-bold text-black" disabled type="button">
+                                        Hasil Akhir <br>
+                                        <span id="hasilAkhir"></span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Praktikum Nomor 3 -->
+                <div class="col-lg-4 col-12 bg-secondary" style="height: 88vh; padding: 0px !important;">
+                    <div class="card shadow text-center rouned-4 mx-3 mt-5">
+                        <div class="card-body">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link active" id="lingkaran-tab" data-bs-toggle="tab" data-bs-target="#lingkaran" type="button" role="tab" aria-controls="lingkaran" aria-selected="true">Lingkaran</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="persegiPanjang-tab" data-bs-toggle="tab" data-bs-target="#persegiPanjang" type="button" role="tab" aria-controls="persegiPanjang" aria-selected="false">Persegi Panjang</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link" id="segitiga-tab" data-bs-toggle="tab" data-bs-target="#segitiga" type="button" role="tab" aria-controls="segitiga" aria-selected="false">Segitiga</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <!-- Lingkaran -->
+                                <div class="tab-pane fade show active" id="lingkaran" role="tabpanel" aria-labelledby="lingkaran-tab">
+                                    <div class="input-group mt-3 mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">π</span>
+                                        <input type="text" class="form-control" name="phi" id="phi" value="22/7" disabled>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Rusuk</span>
+                                        <input type="text" class="form-control" name="rusuk" id="rusuk">
+                                    </div>
+                                    <div class="row mx-3">
+                                        <button class="col-12 btn btn-primary" type="button" onclick="circleMethod()">Hitung</button>
+                                        <button class="mt-3 col-12 btn btn-outline-primary fw-bolder text-black" disabled type="button">
+                                            Hasil Akhir = <span id="circleResult">0</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Persegi Panjang -->
+                                <div class="tab-pane fade" id="persegiPanjang" role="tabpanel" aria-labelledby="persegiPanjang-tab">
+                                    <div class="input-group mt-3 mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Panjang</span>
+                                        <input type="text" class="form-control" name="panjang" id="panjang">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Lebar</span>
+                                        <input type="text" class="form-control" name="lebar" id="lebar">
+                                    </div>
+                                    <div class="row mx-3">
+                                        <button class="col-12 btn btn-primary" type="button" onclick="squareMethod()">Hitung</button>
+                                        <button class="mt-3 col-12 btn btn-outline-primary fw-bolder text-black" disabled type="button">
+                                            Hasil Akhir = <span id="squareResult">0</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="segitiga" role="tabpanel" aria-labelledby="segitiga-tab">
+                                    <div class="input-group mt-3 mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Alas</span>
+                                        <input type="text" class="form-control" name="alas" id="alas">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text" id="inputGroup-sizing-default">Tinggi</span>
+                                        <input type="text" class="form-control" name="tinggi" id="tinggi">
+                                    </div>
+                                    <div class="row mx-3">
+                                        <button class="col-12 btn btn-primary" type="button" onclick="triangleMethod()">Hitung</button>
+                                        <button class="mt-3 col-12 btn btn-outline-primary fw-bolder text-black" disabled type="button">
+                                            Hasil Akhir = <span id="triangleResult">0</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script lang="javascript">
+            const sumMethod = () => {
+                var x = parseFloat(document.getElementById('bil1').value)
+                var y = parseFloat(document.getElementById('bil2').value)
+                var hasil = x + y
+                document.getElementById('hasilJumlah').innerHTML=hasil;
+            }
+            const suhuMethod = () => {
+                var suhu = parseFloat(document.getElementById('suhu').value)
+                if (suhu <= 0) {
+                    document.getElementById('hasilAkhir').innerHTML="Benda dengan suhu " + suhu + " dinyatakan sebagai benda Padat";
+                } else if (suhu >= 100) {
+                    document.getElementById('hasilAkhir').innerHTML="Benda dengan suhu " + suhu + " dinyatakan sebagai benda Gas";
+                } else {
+                    document.getElementById('hasilAkhir').innerHTML="Benda dengan suhu " + suhu + " dinyatakan sebagai benda Cair";
+                }
+            }
+            const circleMethod = () => {
+                var phi = 22/7
+                var rusuk = parseFloat(document.getElementById('rusuk').value)
+                var hasil = phi * rusuk * rusuk
+                
+                document.getElementById('circleResult').innerHTML=hasil
+            }
+            const squareMethod = () => {
+                var p = parseFloat(document.getElementById('panjang').value)
+                var l = parseFloat(document.getElementById('lebar').value)
+                var hasil = p * l
+
+                document.getElementById('squareResult').innerHTML=hasil
+            }
+            const triangleMethod = () => {
+                var a = parseFloat(document.getElementById('alas').value)
+                var t = parseFloat(document.getElementById('tinggi').value)
+                var hasil = a * t / 2
+
+                document.getElementById('triangleResult').innerHTML=hasil
+            }
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </body>
+</html>
